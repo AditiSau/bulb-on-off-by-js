@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bulb on-off</title>
+	<style type="text/css">
+		button
+		{
+			padding: 20px;
+			background-image: linear-gradient(to bottom right, pink, grey);
+			border: 0px;
+			border-radius: 10px;
+			color: black;
+			font-size:20px;
+			font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+ 		 font-stretch: expanded;
+		}
+
+		#loading
+
+		{
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+			background: #fff url('XA.gif') no-repeat;
+			z-index:99999;
+
+		}
+	</style>
+</head>
+<body onload="myload();myFunction()">
+<center>
+	<div id="loading"> </div>
+
+	<h2> SWITCH ON/OFF OF BULB </h2>
+	<button onclick="document.getElementById('myimg').src='on.jpg'">ON</button>
+	 <img  id ="myimg" src="off.jpg" width="25%" >
+
+	<button onclick="document.getElementById('myimg').src='off.jpg'">OFF</button></center>
+	
+</body>
+<script type="text/javascript">
+	var preloader=document.getElementById('loading');
+	function myload(){
+			preloader.style.display='none';
+		}
+</script>
+<script>
+function myFunction() {
+  setTimeout(function(){ alert("Hello! Have a nice day! Nice to meet you...."); }, 2000);
+}
+</script>
+</html>
